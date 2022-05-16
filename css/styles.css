@@ -1,0 +1,142 @@
+body {
+  font-family: 'Raleway', sans-serif;
+  color: hsl(243, 100%, 93%);
+  font-size: 14px;
+  min-height: 100vh;
+  position: relative;
+}
+
+.background-wrapper {
+  content: url('../images/bg-mobile.png');
+  width: 100%;
+  height: 100vh;
+}
+
+/* Main: Header */
+
+main {
+  width: 90%;
+  margin: 0 auto;
+  position: absolute;
+  top: 46%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.main-header {
+  background-color: hsl(228, 56%, 26%);
+  padding: 3rem;
+  border-top-right-radius: 6rem;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  margin-bottom: 1rem;
+}
+
+#logo {
+  width: 135px;
+  height: auto;
+  margin-bottom: 1.5rem;
+}
+
+#data-document {
+  width: 20px;
+  height: auto;
+}
+
+#data-folder {
+  width: 24px;
+  height: auto;
+}
+
+#data-upload {
+  width: 24px;
+  height: auto;
+}
+
+.data-list {
+  display: flex;
+  align-items: center;
+}
+
+.data-list > li {
+  border-radius: 10px;
+  background-color:  hsl(229, 57%, 11%);
+  padding: .75rem;
+  margin-right: 1rem;
+}
+
+.main-storage {
+  background-color: hsl(228, 56%, 26%);
+  border-radius: 10px;
+  padding: 3rem;
+  position: relative;
+}
+
+.storage-header {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.storage-header > strong {
+  font-weight: 700;
+}
+
+#progress-bar-container {
+  height: 1rem;
+  background-color: hsl(229, 57%, 11%);
+  border: 2px solid hsl(229, 57%, 11%);
+  border-radius: 500px;
+  position: relative;
+  margin-bottom: .5rem;
+}
+
+#progress-bar {
+  background: linear-gradient(to right, hsl(6, 100%, 80%), hsl(335, 100%, 65%));
+  height: 100%;
+  width: 81.5%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 500px;
+}
+
+#progress-bar::after {
+  content: '';
+  height: 10px;
+  width: 10px;
+  border-radius: 50%;
+  background-color: hsl(0, 0%, 100%);
+  position: absolute;
+  right: 1%;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.progress-bar-labels {
+  display: flex;
+  justify-content: space-between;
+}
+
+.storage-remaining {
+  width: 55%;
+  position: absolute;
+  bottom: -20%;
+  left: 50%;
+  transform: translateX(-50%);
+  color: hsl(229, 57%, 11%);
+  background-color: hsl(0, 0%, 100%);
+  padding: .5rem;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  color: hsl(0, 0%, 50%)
+}
+
+.storage-remaining > strong {
+  font-size: 2.5rem;
+  margin-right: .75rem;
+  color: hsl(229, 57%, 11%);
+}
