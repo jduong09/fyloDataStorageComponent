@@ -94,7 +94,7 @@ main {
 #progress-bar {
   background: linear-gradient(to right, hsl(6, 100%, 80%), hsl(335, 100%, 65%));
   height: 100%;
-  width: 81.5%;
+  width: 73.35%;
   position: absolute;
   top: 0;
   left: 0;
@@ -139,4 +139,75 @@ main {
   font-size: 2.5rem;
   margin-right: .75rem;
   color: hsl(229, 57%, 11%);
+}
+
+@media (min-width: 768px) {
+  body {
+    background-color: hsl(229, 57%, 11%);
+  }
+  main {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    width: 75%;
+  }
+
+  .background-wrapper {
+    content: url('../images/bg-desktop.png');
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 55%;
+  }
+
+  .main-header {
+    width: 40%;
+    padding: 2rem;
+    margin-bottom: 0;
+  }
+  
+  .main-storage {
+    width: 55%;
+    padding: 2rem;
+  }
+
+  .storage-header {
+    text-align: start;
+  }
+
+  .storage-remaining {
+    width: 40%;
+    bottom: inherit;
+    left: inherit;
+    right: 2rem;
+    top: -30%;
+    transform: none;
+    border-bottom-right-radius: 0;
+  }
+
+  .storage-remaining::after {
+    content: '';
+    width: 0;
+    height: 0;
+    border-right: 15px solid hsl(0, 0%, 100%);
+    border-left: 15px solid transparent;
+    border-bottom: 10px solid transparent;
+    position: absolute;
+    bottom: -10px;
+    right: 0;
+  }
+
+  .storage-remaining > strong {
+    font-size: 2rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  .main-header {
+    width: 30%;
+  }
+
+  .main-storage {
+    width: 65%;
+  }
 }
